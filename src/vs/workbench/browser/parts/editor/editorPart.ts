@@ -143,7 +143,7 @@ export class EditorPart extends Part implements IEditorPart, IEditorGroupsView {
 
 	protected container: HTMLElement | undefined;
 
-	private scopedInstantiationService!: IInstantiationService;
+	private scopedInstantiationService!: IInstantiationService; // 实例化服务生成的作用域
 
 	private centeredLayoutWidget!: CenteredViewLayout;
 
@@ -156,7 +156,7 @@ export class EditorPart extends Part implements IEditorPart, IEditorGroupsView {
 		id: string,
 		private readonly groupsLabel: string,
 		public readonly isAuxiliary: boolean,
-		@IInstantiationService private readonly instantiationService: IInstantiationService,
+		@IInstantiationService private readonly instantiationService: IInstantiationService, // 装饰器自动完成对该私有变量的初始化，这样直接在参数中完成，不需要在代码里生成，也是对函数的快速复用，当函数改变时，只需要修改原始的装饰函数不可以了，不需要修改这里的代码
 		@IThemeService themeService: IThemeService,
 		@IConfigurationService private readonly configurationService: IConfigurationService,
 		@IStorageService storageService: IStorageService,
