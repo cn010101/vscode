@@ -34,7 +34,7 @@ import { IBoundarySashes } from 'vs/base/browser/ui/sash/sash';
 import { IHostService } from 'vs/workbench/services/host/browser/host';
 import { IContextKeyService } from 'vs/platform/contextkey/common/contextkey';
 import { ServiceCollection } from 'vs/platform/instantiation/common/serviceCollection';
-import { EditorPartMaximizedEditorGroupContext, EditorPartMultipleEditorGroupsContext, IsAuxiliaryEditorPartContext } from 'vs/workbench/common/contextkeys';
+import { EditorPartMaximizedEditorGroupContext, EditorPartMultipleEditorGroupsContext, IsAuxiliaryEditorPartContext } from 'vs/workbench/common/contextkey';
 
 export interface IEditorPartUIState {
 	readonly serializedGrid: ISerializedGrid;
